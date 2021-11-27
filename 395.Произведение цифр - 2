@@ -1,0 +1,41 @@
+/*айдите количество чисел из отрезка [L, R], которые делятся на произведение своих цифр.
+
+Входные данные
+Входной файл INPUT.TXT содержит два целых числа L и R. (1 ≤ L ≤ R ≤ 109, |R-L| ≤ 105)
+
+Выходные данные
+В выходной файл OUTPUT.TXT выведите ответ на задачу*/
+#include<iostream>
+using namespace std;
+int func(int n) {
+    int res = 1;
+     
+    while (n)
+    {
+         
+        res *= (n % 10);
+        n /= 10;
+    }   
+ 
+    return res;
+}
+int main() {
+     
+    int l, r,value=0;
+    cin >> l >> r;
+    for (int i = l; i<=r; i++)
+    {
+        int a = func(i);
+        if (a != 0)
+        {
+ 
+            if (i % a == 0)
+            {
+                value++;
+            }
+        }
+    }
+    cout << value;
+    return 0;
+ 
+}
