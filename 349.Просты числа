@@ -1,0 +1,36 @@
+/*еобходимо вывести все простые числа от M до N включительно.
+
+Входные данные
+Входной файл INPUT.TXT содержит два натуральных числа M и N, разделенных пробелом (2 ≤ M ≤ N ≤ 106)*/
+#include<iostream>
+using namespace std;
+bool func(int n) {
+    if (n == 2)
+        return true;
+    else if (n % 2 == 0)
+        return false;
+ 
+    for (int i = 3; i*i <=n; i+=2)
+    {
+        if (n % i == 0) {
+ 
+            return false;
+        }
+ 
+    }
+    return true;
+}
+int main() {
+ 
+    int m, n, value = 0;
+    cin >> m >> n;
+    for (int i = m; i <= n; i++)
+    {
+        if (func(i)) {
+            cout << i << endl;
+            value++;
+        }
+    }
+    if (value == 0)
+        cout << "Absent";
+}
