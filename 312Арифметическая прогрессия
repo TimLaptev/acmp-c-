@@ -1,0 +1,15 @@
+#include<iostream>
+#include<list>
+#include<algorithm>
+#include<string>
+#include<vector>
+using namespace std;
+int main() {
+    int a1, a2, n;
+    cin >>a1>>a2>>n;
+    int q = a2 - a1;
+     
+    cout << ( a1 + q*(n - 1));
+ 
+ 
+}
