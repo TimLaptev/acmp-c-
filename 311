@@ -1,0 +1,29 @@
+#include<iostream>
+#include <stdio.h>
+using namespace std;
+int main() {
+    int t1, t2, t3, t4;
+    scanf("%d:%d", &t1, &t2);
+    cin >> t3 >> t4;
+ 
+    t1 += t3;
+    t2 += t4;
+    t1 += t2 / 60;
+    t2 %= 60;
+    t1 %= 24;
+     
+    if (t1<10)
+    {
+        cout << "0";
+    }
+    cout << t1 << ":";
+    if (t2<10)
+    {
+        cout << "0";
+ 
+    }
+ 
+    cout << t2;
+ 
+ 
+}
